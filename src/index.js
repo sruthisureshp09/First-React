@@ -1,24 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-
-/* let clock= function()
+function myfunction(name='sruthi',place='vadakara')
 {
-   return <h2>this is clocktime {new Date().toLocaleTimeString()} </h2> 
+    return <div> 
+                <h2>My function returns my name <b>{name}</b> and place <b>{place} </b></h2>
+                <h1>helloooo drr</h1>
+            </div>
 }
+
+
 ReactDOM.render(
   
- clock(),
+    myfunction('Noname','Noplace'),
 
     document.getElementById('root')
-); */
-
-setInterval(function(){
-   
-    ReactDOM.render(
-  
-     <h2>The Time is {new Date().toLocaleTimeString()} </h2>, 
-     document.getElementById('root')
-       );
-},1000);
+);
 
