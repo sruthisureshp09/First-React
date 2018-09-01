@@ -12,7 +12,7 @@ import ReactDOM from 'react-dom'
 
     }
 } */   // using esf class
-function Welcome(props)
+/* function Welcome(props)
 {
     return <h1> Hello, {props.name}  on {props.place} </h1>   
 }
@@ -34,4 +34,23 @@ function Show()
      document.getElementById('root')
        );
 
+ */
 
+   
+        function Clock()
+        {
+            return <div>
+                        <h1>Time Now:- {new Date().toLocaleTimeString()} </h1>
+                        <h1>Date Now:- {new Date().toLocaleDateString()} </h1>
+                    </div>
+        }
+       
+        function time()
+        {
+            ReactDOM.render(
+                Clock(),
+                document.getElementById('root')
+            );
+        }
+            //setInterval(function(){time()},1000);
+            setInterval(time,1000);
