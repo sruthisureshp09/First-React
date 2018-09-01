@@ -1,29 +1,51 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
- class Inc extends React.Component{
 
-    constructor(props)
+
+/* function Message({message})
+{
+     if(!message)
     {
-        super(props);
-        this.state = {counter :0}
+        return <h1>no message</h1>
 
     }
-    increment= (e)=>
-    {
-        e.preventDefault();
-        this.setState({
-            counter:  this.state.counter +1
+    return <h1>{message}</h1> */
 
-        });
+   /* return(
+        <div>
+       {message ? ( 
+       
+            <h1>{message}</h1>
+        ) : (
+        
+        <h1>no message</h1> 
+    )}
 
+       </div>
+       )
     }
-    render(){
-        return <button onClick={this.increment}>Value is {this.state.counter}</button>
-    }
- }
 
  ReactDOM.render(
-     <Inc/>,
+     //<Message message={null}/>,
+     <Message message={'hiiii'}/>,
+
      document.getElementById('root')
- )
+ ) */
+
+
+ function Box(props)
+ {
+    return (
+    <div 
+         className="box box-small" 
+         style= {{border: 7}} 
+         {...props}
+
+    />
+    )
+ }
+ ReactDOM.render(
+   <Box props='small box' style={{backgroundColor: 'yellow'}}>Big Box</Box>,
+    document.getElementById('root')
+) 
